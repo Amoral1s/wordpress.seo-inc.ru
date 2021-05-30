@@ -866,6 +866,10 @@ body {
 }
 
 @media (max-width: 415px) {
+  .header-nav ul li.menu-item-has-children ul li a {
+    white-space: pre-wrap;
+    width: 100%;
+  }
   .offer-right {
     left: 52%;
     -webkit-transform: translateX(-50%);
@@ -889,10 +893,6 @@ body {
 }
 
 @media (max-width: 360px) {
-  .header-nav ul li.menu-item-has-children ul li a {
-    white-space: pre-wrap;
-    width: 100%;
-  }
   .offer-left h1 {
     font-size: 30px;
   }

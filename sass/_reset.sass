@@ -30,20 +30,21 @@ div, span, article, nav, section,main, header
 input, button, select, textarea
 	border: 0
 	box-shadow: none
-	font-size: 14px
-	color: #000000
-	border: 1px solid rgba(255, 255, 255, 0.1)
+	font-size: 18px
+	color: $dark
+	border-radius: 5px
 
 input[type="text"],input[type="tel"], input[type="password"],input[type="email"]
 	box-shadow: none
 	width: 100%
 	max-width: 320px
 	padding: 10px 15px
+	border-radius: 5px
 textarea
 	resize: none
 	max-width: 320px
 	width: 100%
-	border: 1px solid rgba(255, 255, 255, 0.1)
+	border: 1px solid rgba(255, 255, 255, 1)
 	max-height: 100px
 	padding: 10px 15px
 
@@ -53,6 +54,7 @@ input[type="text"],input[type="tel"],input[type="submit"],button
 	padding: 10px 15px
 	width: 100%
 	max-width: 320px
+	height: 55px
 input[type="submit"],button
 	cursor: pointer
 	
@@ -70,8 +72,6 @@ h1, h2, h3, h4, h5
 	padding-left: 15px
 	margin-right: auto
 	margin-left: auto
-	display: flex
-	justify-content: space-between
 
 @media (max-width: 1200px) 
   .container 

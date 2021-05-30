@@ -1,6 +1,16 @@
 @import 'vars'
 
 @media (min-width: 992px)
+  a
+    transition: .2s
+    &:hover
+      transition: .2s
+      color: $accent
+  a.button
+    transition: .2s
+    &:hover
+      transition: .2s
+      color: #fff
   .header 
     &-logo.home-logo
       transition: .2s
@@ -36,3 +46,36 @@
       &::before
         opacity: 1
         transition: .2s
+  input.button
+    transition: .2s
+    &:hover
+      transition: .2s
+      transform: scale(1.1)
+      &::before
+        opacity: 1
+        transition: .2s
+  .case
+    &-item
+      &:hover
+        &::before
+          transition: .2s
+          opacity: .5
+  .news
+    &-wrap
+      &-item
+        transition: .2s
+        h3
+          transition: .2s
+        p
+          transition: .2s
+        span
+          transition: .2s
+          &::after
+            transition: .2s
+        &:hover
+          transition: .2s
+          h3
+            transition: .2s
+          p
+            transition: .2s
+            color: #fff

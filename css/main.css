@@ -1,4 +1,26 @@
 @media (min-width: 992px) {
+  a {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  a:hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    color: #6882DD;
+  }
+  a.button {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  a.button:hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    color: #fff;
+  }
   .header-logo.home-logo {
     -webkit-transition: .2s;
     -o-transition: .2s;
@@ -55,5 +77,71 @@
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;
+  }
+  input.button {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  input.button:hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  input.button:hover::before {
+    opacity: 1;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .case-item:hover::before {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    opacity: .5;
+  }
+  .news-wrap-item {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item h3 {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item p {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item span {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item span::after {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item:hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item:hover h3 {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .news-wrap-item:hover p {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    color: #fff;
   }
 }

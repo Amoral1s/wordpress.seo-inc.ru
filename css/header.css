@@ -44,9 +44,10 @@ input, button, select, textarea {
   border: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-size: 14px;
-  color: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 18px;
+  color: #020202;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 input[type="text"], input[type="tel"], input[type="password"], input[type="email"] {
@@ -55,13 +56,15 @@ input[type="text"], input[type="tel"], input[type="password"], input[type="email
   width: 100%;
   max-width: 320px;
   padding: 10px 15px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 textarea {
   resize: none;
   max-width: 320px;
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
   max-height: 100px;
   padding: 10px 15px;
 }
@@ -73,6 +76,7 @@ input[type="text"], input[type="tel"], input[type="submit"], button {
   padding: 10px 15px;
   width: 100%;
   max-width: 320px;
+  height: 55px;
 }
 
 input[type="submit"], button {
@@ -96,14 +100,6 @@ h1, h2, h3, h4, h5 {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media (max-width: 1200px) {
@@ -340,13 +336,13 @@ body {
 }
 
 .offer {
-  padding: 100px 0;
+  padding: 140px 0 100px 0;
   background-image: url(../img/bg-offer-2.svg);
   background-repeat: no-repeat;
   -webkit-background-size: contain;
           background-size: contain;
   background-position: 250px -100px;
-  max-height: 700px;
+  max-height: 780px;
   overflow: hidden;
 }
 
@@ -423,6 +419,7 @@ body {
           align-items: center;
   position: relative;
   z-index: 10;
+  color: #fff;
 }
 
 .button::before {
@@ -444,10 +441,21 @@ body {
   transition: .2s;
 }
 
+.title {
+  font-size: 46px;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 1600px) {
+  .offer {
+    padding-bottom: 70px;
+    max-height: 730px;
+  }
+}
+
 @media (max-width: 1600px) {
   .offer {
     padding-top: 70px;
-    padding-bottom: 70px;
   }
 }
 
@@ -492,12 +500,14 @@ body {
     font-size: 16px;
   }
   .offer {
-    background-position: 0px -181px;
+    background-position: 0px -101px;
     padding-top: 50px;
+    max-height: 470px;
   }
   .offer-right img {
     height: 600px;
     width: 600px;
+    right: 60px;
   }
   .offer-left {
     padding-top: 20px;
@@ -720,7 +730,7 @@ body {
     font-size: 20px;
   }
   .offer {
-    max-height: 500px;
+    max-height: 430px;
     background-position: 0 -80px;
   }
   .offer-left {

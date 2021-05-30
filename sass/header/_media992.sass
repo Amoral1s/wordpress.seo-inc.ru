@@ -79,7 +79,8 @@
               &::after
                 top: 13px
           ul
-            height: 0
+            height: 0%
+            max-height: 0
             position: static
             padding: 0%
             background: none
@@ -96,8 +97,10 @@
                 top: 13px
                 background-image: url(../img/icons/down-arr-blue.svg)
                 transition: .2s
+                transform: rotate(180deg)
           ul
             height: 100%
+            max-height: 100%
             padding: 0 0 20px 10px
             transition: all .2s
             transition-timing-function: linear

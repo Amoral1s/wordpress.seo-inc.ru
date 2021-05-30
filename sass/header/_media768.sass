@@ -1,0 +1,32 @@
+@media (max-width: 768px)
+  .header
+    &-nav
+      ul
+        max-width: 540px
+      &-phone
+        max-width: calc(540px - 15px)
+  .offer
+    max-height: 800px
+    position: relative
+    overflow: visible
+    .container
+      flex-direction: column
+      align-items: center
+    &-right
+      position: absolute
+      left: 50%
+      bottom: -70px
+      height: 300px
+      width: 300px
+      img
+        height: 300px
+        max-width: 100%
+        width: 300px
+        position: static
+    &-left
+      width: 100%
+      h1
+        font-size: 52px
+      p
+        font-size: 18px
+        max-width: 100%

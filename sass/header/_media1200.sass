@@ -1,0 +1,42 @@
+@media (max-width: 1600px)
+  .offer
+    padding-top: 70px
+    padding-bottom: 70px
+@media (max-width: 1200px)
+  .header
+    &-nav 
+      width: calc(100% - 180px)
+      justify-content: space-between
+      &>ul
+        width: 100%
+        justify-content: center
+      &-phone
+        margin-left: 30px
+        width: max-content
+        a, p
+          white-space: nowrap
+      ul 
+        &>li
+          margin-left: 20px
+        li.menu-item-has-children 
+          ul
+            margin-top: 30px
+          &>div
+            &::after
+              top: 10px
+            &::before
+              height: 30px
+  body, ul
+    font-size: 16px
+  .offer
+    background-position: 0px -181px
+    padding-top: 50px
+    &-right
+      img
+        height: 600px
+        width: 600px
+    &-left
+      padding-top: 20px
+      h1
+        font-size: 50px
+        margin-bottom: 30px

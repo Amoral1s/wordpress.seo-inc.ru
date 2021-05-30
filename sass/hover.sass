@@ -1,0 +1,38 @@
+@import 'vars'
+
+@media (min-width: 992px)
+  .header 
+    &-logo.home-logo
+      transition: .2s
+      &:hover
+        background-image: url(../img/logo-hover.svg)
+        transition: .2s
+    &-nav
+      ul
+        li.menu-item-has-children
+          transition: .2s
+          &:hover
+            &>ul
+              display: block
+              border: 1px solid rgba(167, 167, 167, .5)
+              height: auto
+              padding: 30px 40px
+              transition: .2s
+          &>div
+            cursor: pointer
+            &:hover
+              transition: .2s
+              color: $accent
+              &::after
+                background-image: url(../img/icons/down-arr-blue.svg)
+                transition: .2s
+    a
+      transition: .2s
+      &:hover
+        transition: .2s
+        color: $accent
+  .button
+    &:hover
+      &::before
+        opacity: 1
+        transition: .2s

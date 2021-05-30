@@ -1,0 +1,142 @@
+@media (max-width: 992px) 
+  body
+    padding-top: 80px
+  .header
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    background-color: $dark
+    .burger
+      display: block
+      position: relative
+      width: 40px
+      height: 24px
+      margin-top: 2px
+      span
+        position: absolute
+        left: 0
+        width: 40px
+        height: 4px
+        background: $main
+        top: 0
+        transition: .2s
+        &:nth-child(2)
+          top: 10px
+        &:nth-child(3)
+          top: 20px
+      &-active
+        span
+          top: 50%
+          transform: translateY(-50%) rotate(45deg)
+          transition: .2s
+          &:nth-child(2)
+            transform: translateY(-50%) rotate(135deg)
+            top: 50%
+          &:nth-child(3)
+            transform: translateY(-50%) rotate(-45deg)
+            top: 50%
+    &-nav
+      position: fixed
+      top: 80px
+      width: 100%
+      left: 0
+      background: $dark
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      padding: 0
+      transition: .2s
+      overflow: hidden
+      height: 0
+      transition-timing-function: linear
+      &-phone
+        margin-left: 15px
+        margin-top: 30px
+        align-items: flex-start
+        max-width: 725px
+        width: 100%
+        a
+          font-size: 26px
+        p
+          font-size: 20px
+      &-active
+        transition: .2s
+        transition-timing-function: linear
+        height: 100%
+        padding: 30px 30px 150px 10px
+        overflow: auto
+        display: flex
+        align-items: center
+      &>ul
+        max-width: 740px
+      ul
+        max-width: 740px
+        li.menu-item-has-children
+          &>
+            div
+              &::after
+                top: 13px
+          ul
+            height: 0
+            position: static
+            padding: 0%
+            background: none
+            margin-top: 0
+            transition: all .2s
+            transition-timing-function: linear
+        li.menu-item-has-children.link-active
+          color: $accent
+          transition: .2s
+          z-index: 30
+          &>
+            div
+              &::after
+                top: 13px
+                background-image: url(../img/icons/down-arr-blue.svg)
+                transition: .2s
+          ul
+            height: 100%
+            padding: 0 0 20px 10px
+            transition: all .2s
+            transition-timing-function: linear
+
+        li
+          z-index: 40
+          a
+            margin-bottom: 20px
+            display: block
+            width: max-content
+          div
+            margin-bottom: 20px
+            width: max-content
+      &>ul
+        justify-content: flex-start
+        align-items: flex-start
+        flex-direction: column
+        li
+          z-index: 30
+          a, div
+            font-size: 20px
+
+  .offer
+    max-height: 500px
+    background-position: 0 -80px
+    &-left
+      width: 60%
+      h1
+        font-size: 42px
+      p
+        font-size: 16px
+    &-right
+      width: 40%
+      img
+        height: 500px
+        width: 500px
+        top: -80px
+
+
+
+
+

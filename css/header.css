@@ -816,8 +816,8 @@ body {
     margin-bottom: 0;
   }
   .header {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .header-logo {
     -webkit-background-size: contain;
@@ -825,6 +825,9 @@ body {
     background-position: left center;
     width: 100px;
     height: 40px;
+  }
+  .header-nav {
+    top: 55px;
   }
   .header-nav-active {
     padding-left: 15px;

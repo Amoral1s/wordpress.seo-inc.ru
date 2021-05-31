@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
   //
 
   //Кейсы глвная
-  const caseItem = document.querySelectorAll('.case-item');
+  const caseItem = document.querySelectorAll('.case-item'),
+        iframeFeed = document.querySelectorAll('.feed-wrap-item iframe');
 
   if (caseItem.length > 0) {
     caseItem.forEach((elem) => {
@@ -44,16 +45,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
+      
       caseItem.forEach((elem) => {
           if (!elem.classList.contains('loaded-case')) {
               elem.style = `background-image: url(${elem.dataset.img})`;
               elem.classList.add('loaded-case'); 
           } 
       });
+
+      if (iframeFeed.length > 0) {
+        iframeFeed.forEach((elem) => {
+          elem.src = elem.dataset.src;
+        });
+      }
+
     }
   }, {once: true});
   //
-
+  //select
   $('select').addClass('select');
 
   $('.select').each(function() {
@@ -111,5 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
   });
+  //select
+
+
+
+
+
 
 });

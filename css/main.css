@@ -144,4 +144,33 @@
     transition: .2s;
     color: #fff;
   }
+  .footer-wrap .social a {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .footer-wrap .social a:nth-child(1):hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    background-image: url(../img/icons/inst-hover.svg);
+  }
+  .footer-wrap .social a:nth-child(2):hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    background-image: url(../img/icons/vk-hover.svg);
+  }
+  .footer-wrap .social a:nth-child(3):hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    background-image: url(../img/icons/tg-hover.svg);
+  }
+  .footer-wrap .social a:nth-child(4):hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    background-image: url(../img/icons/fl-hover.svg);
+  }
 }

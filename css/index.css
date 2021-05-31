@@ -806,6 +806,112 @@ select::after {
   background-image: url(../img/icons/fl.svg);
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(156, 156, 156, 0.3);
+  display: none;
+  opacity: 0;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #000;
+  max-width: 410px;
+  width: 100%;
+  min-height: 400px;
+  z-index: 110;
+  background-image: url(../img/bg-form.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: left;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  display: none;
+  opacity: 0;
+  -webkit-transition: all .1s;
+  -o-transition: all .1s;
+  transition: all .1s;
+}
+
+.popup-wrap {
+  padding: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup-wrap h3 {
+  font-size: 28px;
+}
+
+.popup-wrap form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.popup-wrap form input {
+  max-width: 100%;
+  width: 100%;
+}
+
+.popup-wrap form label {
+  margin-top: 30px;
+}
+
+.popup-wrap form input[type="submit"] {
+  margin: 50px 0 20px 0;
+}
+
+.popup-wrap form small {
+  font-size: 12px;
+  color: #9C9C9C;
+  text-align: center;
+  width: 100%;
+}
+
+.popup .close {
+  position: absolute;
+  top: -3px;
+  right: 15px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
 @media (max-width: 1200px) {
   .features h2 {
     font-size: 24px;
@@ -1146,5 +1252,61 @@ select::after {
   }
   .feed-wrap-item iframe {
     height: 190px;
+  }
+}
+
+@media (max-width: 420px) {
+  .popup {
+    max-width: -webkit-calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    width: 100%;
+  }
+  .popup-wrap {
+    padding: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .popup-wrap h3 {
+    font-size: 28px;
+  }
+  .popup-wrap form {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .popup-wrap form input {
+    max-width: 100%;
+    width: 100%;
+  }
+  .popup-wrap form label {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .popup-wrap form input[type="submit"] {
+    margin: 30px 0 15px 0;
+  }
+  .popup-wrap form small {
+    font-size: 12px;
+    color: #9C9C9C;
+    text-align: center;
+    width: 100%;
   }
 }

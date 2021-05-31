@@ -173,4 +173,15 @@
     transition: .2s;
     background-image: url(../img/icons/fl-hover.svg);
   }
+  .popup .close {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .popup .close:hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    color: #6882DD;
+  }
 }

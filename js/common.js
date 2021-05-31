@@ -62,6 +62,69 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, {once: true});
   //
+  //popup
+
+  const popup = document.querySelectorAll('.popup'),
+        overlay = document.querySelector('.overlay'),
+        callConsultation = document.querySelectorAll('.call-consultation'),
+        close = document.querySelectorAll('.popup .close');
+
+  if (callConsultation.length > 0) {
+    callConsultation.forEach((elem) => {
+      elem.addEventListener('click', () => {
+        const popupConsultation = document.querySelector('.popup-consultation');
+        myFadeInFlex(popupConsultation);
+        myFadeInFlex(overlay);
+      });
+    })
+  }
+
+  
+
+  overlay.addEventListener('click', () => {
+    popup.forEach((elem) => {
+      popup.forEach((elem) => {
+        myFadeOut(elem);
+      });
+      myFadeOut(overlay);
+    });
+  });
+  
+  close.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      popup.forEach((elem) => {
+        myFadeOut(elem);
+      });
+      myFadeOut(overlay);
+    });
+  });
+
+  //FADE JS
+  function myFadeOut(el) {
+    var opacity = 1;
+    var timer = setInterval(function() {
+      if(opacity <= 0.1) {
+        clearInterval(timer);
+        el.style.display = "none";
+      }
+      el.style.opacity = opacity;
+      opacity -= opacity * 0.1;
+    }, 10);
+  }
+
+  function myFadeInFlex(el) {
+    var opacity = 0.01;
+    el.style.display = "block";
+    var timer = setInterval(function() {
+      if(opacity >= 1) {
+        clearInterval(timer);
+      }
+      el.style.opacity = opacity;
+      opacity += opacity * 0.1;
+    }, 0.1);
+  }
+
+
   //select
   $('select').addClass('select');
 
@@ -122,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   //select
 
-
+  
 
 
 

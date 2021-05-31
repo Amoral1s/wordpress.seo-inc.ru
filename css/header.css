@@ -815,6 +815,17 @@ body {
   .header-nav ul li.menu-item-has-children ul li a {
     margin-bottom: 0;
   }
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .header-logo {
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-position: left center;
+    width: 100px;
+    height: 40px;
+  }
   .header-nav-active {
     padding-left: 15px;
   }

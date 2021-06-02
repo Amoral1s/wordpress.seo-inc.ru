@@ -1142,6 +1142,9 @@ select::after {
     display: -ms-flexbox;
     display: flex;
   }
+  .question {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 768px) {

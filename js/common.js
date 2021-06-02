@@ -1,36 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  //header
-  const burger = document.querySelector('.burger'),
-        navMenu = document.querySelector('.header-nav');
-    
-  burger.addEventListener('click', () => {
-    if (burger.classList.contains('burger-active')) {
-      burger.classList.remove('burger-active');
-      navMenu.classList.remove('header-nav-active');
-    } else {
-      burger.classList.add('burger-active');
-      navMenu.classList.add('header-nav-active');
-    }
-  });
-
-  const screenWidth = window.screen.width;
-
-  if (screenWidth <= 992) {
-    const navLinks = document.querySelectorAll('li.menu-item-has-children > div');
-
-    navLinks.forEach((elem) => {
-        elem.addEventListener('click', () => {
-            if (elem.parentElement.classList.contains('link-active')) {
-                elem.parentElement.classList.remove('link-active');
-            } else {
-                elem.parentElement.classList.add('link-active');
-            }
-        });
+  /* header */
+    const burger = document.querySelector('.burger'),
+          navMenu = document.querySelector('.header-nav');
+      
+    burger.addEventListener('click', () => {
+      if (burger.classList.contains('burger-active')) {
+        burger.classList.remove('burger-active');
+        navMenu.classList.remove('header-nav-active');
+      } else {
+        burger.classList.add('burger-active');
+        navMenu.classList.add('header-nav-active');
+      }
     });
-  } 
-  // -- header
 
+    const screenWidth = window.screen.width;
+
+    if (screenWidth <= 992) {
+      const navLinks = document.querySelectorAll('li.menu-item-has-children > div');
+
+      navLinks.forEach((elem) => {
+          elem.addEventListener('click', () => {
+              if (elem.parentElement.classList.contains('link-active')) {
+                  elem.parentElement.classList.remove('link-active');
+              } else {
+                  elem.parentElement.classList.add('link-active');
+              }
+          });
+      });
+    } 
+  // -- header
   //Кейсы глвная
   const caseItem = document.querySelectorAll('.case-item'),
         lazyImg = document.querySelectorAll('.lazy-img');
@@ -64,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {once: true});
   // -- Кейсы главная
   //Отзывы
-
   const iframeFeed = document.querySelectorAll('.feed-wrap-item');
 
   if (iframeFeed.length > 0) {
@@ -80,7 +78,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // -- отзывы
 
+  // Наши работы (page)
+  const ourWorksItem = document.querySelectorAll('.our-works-wrap-item'),
+        ourWorksMoarBtn = document.querySelector('.our-works-moar'),
+        ourWorksMoarItems = document.querySelector('.our-works-moar-items');
 
+  if (ourWorksItem.length > 0) {
+
+    if (ourWorksItem.length <= 3) {
+
+      ourWorksMoarBtn.style.display = 'none';
+
+    } else {
+
+      let workCount = 5;
+
+      ourWorksMoarItems.children[0].textContent = workCount - 2;
+      ourWorksMoarItems.children[2].textContent = ourWorksItem.length;
+
+     
+      ourWorksMoarBtn.addEventListener('click', () => {
+
+        ourWorksItem.forEach((elem, i) => {
+
+          if (i <= workCount) {
+            elem.style.display = 'block';
+            if (i >= ourWorksItem.length - 1) {
+               ourWorksMoarBtn.style.display = 'none';
+               console.log('enddd')
+             } 
+          }
+         
+        });
+
+        workCount += 3;
+
+        ourWorksMoarItems.children[0].textContent = workCount - 2;
+      });
+      
+    }
+
+  }
+  // ---Наши работы (page)
 
 
   //popup
@@ -88,6 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const popup = document.querySelectorAll('.popup'),
         overlay = document.querySelector('.overlay'),
         callConsultation = document.querySelectorAll('.call-consultation'),
+        callLanding = document.querySelectorAll('.call-landing'),
         close = document.querySelectorAll('.popup .close');
 
   if (callConsultation.length > 0) {
@@ -95,6 +135,15 @@ document.addEventListener('DOMContentLoaded', () => {
       elem.addEventListener('click', () => {
         const popupConsultation = document.querySelector('.popup-consultation');
         myFadeInFlex(popupConsultation);
+        myFadeInFlex(overlay);
+      });
+    })
+  }
+  if (callLanding.length > 0) {
+    callLanding.forEach((elem) => {
+      elem.addEventListener('click', () => {
+        const popupLanding = document.querySelector('.popup-landing');
+        myFadeInFlex(popupLanding);
         myFadeInFlex(overlay);
       });
     })

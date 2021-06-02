@@ -10,6 +10,38 @@
     transition: .2s;
     color: #6882DD;
   }
+  a.projects-wrap-item {
+    color: #fff !important;
+  }
+  a.projects-wrap-item-right h2 {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  a.projects-wrap-item-right .projects-wrap-item-right h2 {
+    color: #6882DD;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  a.projects-wrap-item-right .projects-wrap-item-right-param b {
+    color: #fff;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+  }
+  a.projects-wrap-item:hover .projects-wrap-item-right h2 {
+    color: #6882DD !important;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  a.projects-wrap-item:hover .projects-wrap-item-right-param b {
+    color: #fff;
+    -webkit-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+  }
   a.button {
     -webkit-transition: .2s;
     -o-transition: .2s;
@@ -190,6 +222,17 @@
     transition: .2s;
   }
   .popup .close:hover {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    color: #6882DD;
+  }
+  .our-works-wrap-item h3 {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  .our-works-wrap-item:hover h3 {
     -webkit-transition: .2s;
     -o-transition: .2s;
     transition: .2s;

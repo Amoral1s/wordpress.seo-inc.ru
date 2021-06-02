@@ -144,6 +144,17 @@
     transition: .2s;
     color: #fff;
   }
+  .feed-wrap-item:hover::after {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    background-image: url(../img/icons/play-hover.svg);
+  }
+  .feed-wrap-item::after {
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
   .footer-wrap .social a {
     -webkit-transition: .2s;
     -o-transition: .2s;

@@ -666,6 +666,25 @@ select::after {
   height: 300px;
   padding: 0;
   position: relative;
+  cursor: pointer;
+  background-color: #020202;
+}
+
+.feed-wrap-item::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 63px;
+  width: 52px;
+  background-image: url(../img/icons/play.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: center center;
 }
 
 .feed-wrap-item iframe {
@@ -674,8 +693,17 @@ select::after {
   -webkit-border-radius: 10px;
           border-radius: 10px;
   position: absolute;
+  display: none;
   top: 0px;
   left: 0;
+}
+
+.feed-wrap-item-active iframe {
+  display: block;
+}
+
+.feed-wrap-item-active::after {
+  display: none;
 }
 
 .how-wrap {

@@ -79,7 +79,15 @@
           p
             transition: .2s
             color: #fff
-
+  .feed
+    &-wrap
+      &-item
+        &:hover
+          &::after
+            transition: .2s
+            background-image: url(../img/icons/play-hover.svg)
+        &::after
+          transition: .2s
   .footer 
     &-wrap
       .social

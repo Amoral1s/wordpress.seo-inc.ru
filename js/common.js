@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   } 
-  //
+  // -- header
 
   //Кейсы глвная
   const caseItem = document.querySelectorAll('.case-item'),
-        iframeFeed = document.querySelectorAll('.feed-wrap-item iframe');
+        lazyImg = document.querySelectorAll('.lazy-img');
 
   if (caseItem.length > 0) {
     caseItem.forEach((elem) => {
@@ -45,6 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
+      if (lazyImg.length > 0) {
+        lazyImg.forEach((elem) => {
+          if (elem.src.length < 1) {
+            elem.src = elem.dataset.src;
+          }
+        });
+      }
       
       caseItem.forEach((elem) => {
           if (!elem.classList.contains('loaded-case')) {
@@ -53,15 +60,29 @@ document.addEventListener('DOMContentLoaded', () => {
           } 
       });
 
-      if (iframeFeed.length > 0) {
-        iframeFeed.forEach((elem) => {
-          elem.src = elem.dataset.src;
-        });
-      }
-
     }
   }, {once: true});
-  //
+  // -- Кейсы главная
+  //Отзывы
+
+  const iframeFeed = document.querySelectorAll('.feed-wrap-item');
+
+  if (iframeFeed.length > 0) {
+    iframeFeed.forEach((elem) => {
+      elem.addEventListener('click', () => {
+        elem.classList.add('feed-wrap-item-active');
+        console.log(elem.children[0])
+        elem.children[0].src = elem.children[0].dataset.src;
+
+      }, {once: true});
+    })
+  }
+
+  // -- отзывы
+
+
+
+
   //popup
 
   const popup = document.querySelectorAll('.popup'),
@@ -98,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       myFadeOut(overlay);
     });
   });
+  // -- popup
 
   //FADE JS
   function myFadeOut(el) {
@@ -183,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
   });
-  //select
+  // -- select
 
   
 

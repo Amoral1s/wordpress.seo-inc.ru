@@ -940,6 +940,61 @@ select::after {
   cursor: pointer;
 }
 
+#thx {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #020202;
+  display: none;
+  z-index: 200;
+  padding: 100px;
+  max-width: 600px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+  opacity: 0;
+}
+
+#thx .wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 28px;
+  font-weight: 400;
+  height: 320px;
+  padding-bottom: 30px;
+}
+
+#thx .wrap p {
+  text-align: center;
+  margin: 15px 0;
+}
+
+#thx .wrap p:first-child {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 700;
+}
+
 @media (max-width: 1200px) {
   .features h2 {
     font-size: 24px;
@@ -1280,6 +1335,16 @@ select::after {
   }
   .feed-wrap-item iframe {
     height: 190px;
+  }
+  #thx {
+    width: -webkit-calc(100% - 30px);
+    width: calc(100% - 30px);
+  }
+  #thx .wrap p {
+    font-size: 18px;
+  }
+  #thx .wrap p:first-child {
+    font-size: 34px;
   }
 }
 

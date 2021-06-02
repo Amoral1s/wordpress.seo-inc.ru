@@ -532,6 +532,35 @@ select
     color: #fff
     cursor: pointer
 
+#thx
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: $dark
+  display: none
+  z-index: 200
+  padding: 100px
+  max-width: 600px
+  border-radius: 10px 
+  transition: .2s
+  opacity: 0
+  .wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    font-size: 28px
+    font-weight: 400
+    height: 320px
+    padding-bottom: 30px
+    p
+      text-align: center
+      margin: 15px 0
+    p:first-child
+      font-size: 60px
+      line-height: 1
+      font-weight: 700
 
 @import "index/_media1200"
 @import "index/_media992"
